@@ -59,11 +59,11 @@ async def my_new_tool(site_url: str) -> str:
 
 ## Running tests
 
-```bash
-pytest test_gsc_server.py -v
-```
+No test file exists yet. When tests are added, run:
 
-No credentials needed — all Google API calls are mocked with `unittest.mock`.
+```bash
+pytest -v
+```
 
 ## Docker
 

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_FILE_PATHS\" | grep -q 'gsc_server.py'; then uv run python -c 'import gsc_server' 2>&1 || echo 'SYNTAX ERROR in gsc_server.py'; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
